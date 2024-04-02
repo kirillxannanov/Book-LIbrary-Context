@@ -4,16 +4,15 @@ import { BookContext } from '../../context/BookContext'
 import styles from './myCollection.module.scss'
 
 const MyCollection: FC = () => {
-	const { searchCollection, handleDeleteBookCollection } =
-		useContext(BookContext)
+	const { collection, handleDeleteBookCollection } = useContext(BookContext)
 
 	return (
 		<>
-			{searchCollection.length === 0 && (
+			{collection.length === 0 && (
 				<div className={styles.collectionEmpty}>Empty</div>
 			)}
 			<div className={styles.collection}>
-				{searchCollection.map((el) => (
+				{collection.map((el) => (
 					<div key={el.id} className={styles.collectionInner}>
 						<Link to={`/book/${el.id}`}>
 							<img

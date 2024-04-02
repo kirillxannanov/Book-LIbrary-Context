@@ -5,7 +5,8 @@ import styles from './bookList.module.scss'
 
 const BookList: FC = () => {
 	const {
-		searchBookList,
+		// searchBookList,
+		bookList,
 		handleAddBookCollection,
 		handleAddBookFavorite,
 		handleDeleteBookCollection,
@@ -16,11 +17,11 @@ const BookList: FC = () => {
 
 	return (
 		<>
-			{searchBookList.length === 0 && (
+			{bookList.length === 0 && (
 				<div className={styles.bookListEmpty}>Empty</div>
 			)}
 			<div className={styles.bookList}>
-				{searchBookList.map((book) => (
+				{bookList.map((book) => (
 					<Book
 						key={book.id}
 						addBookCollection={handleAddBookCollection}

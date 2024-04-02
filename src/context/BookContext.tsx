@@ -19,9 +19,9 @@ interface IBookContext {
 	favorite: IBookList[]
 	handleAddBookCollection: (obj: IBookList) => void
 	handleAddBookFavorite: (obj: IBookList) => void
-	searchBookList: IBookList[]
-	searchCollection: IBookList[]
-	searchFavorite: IBookList[]
+	// searchBookList: IBookList[]
+	// searchCollection: IBookList[]
+	// searchFavorite: IBookList[]
 	search: string
 	setSearch: React.Dispatch<React.SetStateAction<string>>
 	handleDeleteBookCollection: (obj: IBookList) => void
@@ -36,9 +36,9 @@ export const BookContext = createContext<IBookContext>({
 	favorite: [],
 	handleAddBookCollection: () => {},
 	handleAddBookFavorite: () => {},
-	searchBookList: [],
-	searchCollection: [],
-	searchFavorite: [],
+	// searchBookList: [],
+	// searchCollection: [],
+	// searchFavorite: [],
 	search: '',
 	setSearch: () => {},
 	handleDeleteBookCollection: () => {},
@@ -106,23 +106,23 @@ const BookProvider: FC<IProps> = ({ children }) => {
 		return favorite.some((el) => el.id === obj.id)
 	}
 
-	const searchBookList = bookList.filter(
-		(bookList) =>
-			bookList.title.toLowerCase().includes(search.toLowerCase()) ||
-			bookList.authors.toLowerCase().includes(search.toLowerCase())
-	)
+	// const searchBookList = bookList.filter(
+	// 	(bookList) =>
+	// 		bookList.title.toLowerCase().includes(search.toLowerCase()) ||
+	// 		bookList.authors.toLowerCase().includes(search.toLowerCase())
+	// )
 
-	const searchCollection = collection.filter(
-		(collection) =>
-			collection.title.toLowerCase().includes(search.toLowerCase()) ||
-			collection.authors.toLowerCase().includes(search.toLowerCase())
-	)
+	// const searchCollection = collection.filter(
+	// 	(collection) =>
+	// 		collection.title.toLowerCase().includes(search.toLowerCase()) ||
+	// 		collection.authors.toLowerCase().includes(search.toLowerCase())
+	// )
 
-	const searchFavorite = favorite.filter(
-		(favorite) =>
-			favorite.title.toLowerCase().includes(search.toLowerCase()) ||
-			favorite.authors.toLowerCase().includes(search.toLowerCase())
-	)
+	// const searchFavorite = favorite.filter(
+	// 	(favorite) =>
+	// 		favorite.title.toLowerCase().includes(search.toLowerCase()) ||
+	// 		favorite.authors.toLowerCase().includes(search.toLowerCase())
+	// )
 
 	return (
 		<BookContext.Provider
@@ -132,9 +132,9 @@ const BookProvider: FC<IProps> = ({ children }) => {
 				favorite,
 				handleAddBookCollection,
 				handleAddBookFavorite,
-				searchBookList,
-				searchCollection,
-				searchFavorite,
+				// searchBookList,
+				// searchCollection,
+				// searchFavorite,
 				search,
 				setSearch,
 				handleDeleteBookCollection,

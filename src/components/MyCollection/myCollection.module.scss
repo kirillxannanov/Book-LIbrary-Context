@@ -1,0 +1,9 @@
+.collection {
+	@apply grid grid-cols-4 gap-x-10 mt-10;
+	.collectionInner {
+		@apply w-48 mt-5 flex flex-col text-center relative;
+	}
+}
+.collectionEmpty {
+	@apply h-96 mt-5 flex justify-between items-center ml-96;
+}

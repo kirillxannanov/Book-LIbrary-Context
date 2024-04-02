@@ -1,0 +1,6 @@
+.menu {
+	@apply flex flex-col justify-between text-2xl mt-14 w-56 border-r mr-14;
+	.active {
+		@apply flex w-48 justify-center  bg-cyan-700 rounded-2xl p-2 my-2;
+	}
+}

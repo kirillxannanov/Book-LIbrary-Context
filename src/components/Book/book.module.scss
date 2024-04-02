@@ -1,0 +1,6 @@
+.book {
+	@apply w-48 mt-5 flex flex-col relative  text-center;
+	.buttonsPosition {
+		@apply absolute right-3;
+	}
+}

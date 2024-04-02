@@ -1,0 +1,6 @@
+.header {
+	@apply flex justify-between items-center;
+	.search {
+		@apply outline-none border bg-gray-600 px-7 py-3 rounded-lg;
+	}
+}

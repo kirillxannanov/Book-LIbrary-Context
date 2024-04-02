@@ -4,14 +4,14 @@ import { BookContext } from '../../context/BookContext'
 import styles from './favorite.module.scss'
 
 const Favorite: FC = () => {
-	const { favorite, handleDeleteBookFavorite } = useContext(BookContext)
+	const { searchFavorite, handleDeleteBookFavorite } = useContext(BookContext)
 	return (
 		<>
-			{favorite.length === 0 && (
+			{searchFavorite.length === 0 && (
 				<div className={styles.favoriteEmpty}>Empty</div>
 			)}
 			<div className={styles.favorite}>
-				{favorite.map((el) => (
+				{searchFavorite.map((el) => (
 					<div key={el.id} className={styles.favoriteInner}>
 						<Link to={`/book/${el.id}`}>
 							<img
